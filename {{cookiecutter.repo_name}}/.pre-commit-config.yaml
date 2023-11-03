@@ -32,6 +32,7 @@ repos:
             pass_filenames: true
             stages:
                 - commit-msg
+    {%- if cookiecutter.linter_name == "pylint"" %}
     - repo: https://github.com/pycqa/isort
       rev: 5.13.2
       hooks:
@@ -40,7 +41,7 @@ repos:
             stages:
                 - commit
                 - manual
-    {%- if cookiecutter.linter_name == "ruff" %}
+    {%- elif cookiecutter.linter_name == "ruff" %}
     - repo: https://github.com/astral-sh/ruff-pre-commit
       rev: v0.1.4
       hooks: 
