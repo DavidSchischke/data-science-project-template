@@ -55,6 +55,7 @@ repos:
             args: [--config=./pyproject.toml]
             language: system
             types: [python]
+          {%- if cookiecutter.linter_name == "pylint" %}
           - id: pylint
             name: pylint
             entry: pylint
