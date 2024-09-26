@@ -3,10 +3,9 @@ channels:
     - conda-forge
 dependencies:
     - black=24.4.2
-    - nbqa=1.8.5
     {%- if cookiecutter.install_jupyter == 'yes' %}
     - jupyter=1.0.0
-    - nbqa=1.6.1
+    - nbqa=1.8.5
     {%- endif %}
     {%- if cookiecutter.linter_name == "pylint" %}
     - pylint=3.2.5
