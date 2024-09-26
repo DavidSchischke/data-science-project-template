@@ -43,7 +43,7 @@ repos:
                 - manual
     {%- elif cookiecutter.linter_name == "ruff" %}
     - repo: https://github.com/astral-sh/ruff-pre-commit
-      rev: v0.1.4
+      rev: v0.6.7
       hooks: 
       - id: ruff
     {%- endif %}
