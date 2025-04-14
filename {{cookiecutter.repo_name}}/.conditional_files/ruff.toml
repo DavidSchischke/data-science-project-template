@@ -1,11 +1,13 @@
 # sync with black
 line-length = 100
-
 # No need for NBQA as ruff has native Jupyter support
 extend-include = ["*.ipynb"]
 
+[lint.per-file-ignores]
+"__init__.py" = ["F401"]
+
 # https://docs.astral.sh/ruff/rules/
-ignore = [
+# ignore = [
 #    "E501", # Line too long, handled by black
 #    "W291", # Trailing whitespace, handled by black
 #    "W292", # Missing final newline, handled by black
@@ -30,4 +32,4 @@ ignore = [
     # "C0401", # Wrong spelling in comment
     # "C0402", # Wrong spelling in docstring
     # "C0403"  # Invalid character in docstring
-]
+#]
