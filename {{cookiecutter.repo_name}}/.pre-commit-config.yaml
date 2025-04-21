@@ -46,6 +46,7 @@ repos:
       rev: v0.6.7
       hooks: 
       - id: ruff
+        args: [--fix]
     {%- endif %}
     - repo: local
       hooks:
