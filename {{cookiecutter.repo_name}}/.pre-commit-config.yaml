@@ -47,16 +47,17 @@ repos:
       hooks: 
       - id: ruff
         args: [--fix]
+      - id: ruff-format
     {%- endif %}
     - repo: local
       hooks:
+          {%- if cookiecutter.linter_name == "pylint" %}
           - id: black
             name: black
             entry: black
             args: [--config=./pyproject.toml]
             language: system
             types: [python]
-          {%- if cookiecutter.linter_name == "pylint" %}
           - id: pylint
             name: pylint
             entry: pylint
